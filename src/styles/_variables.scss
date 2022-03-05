@@ -1,0 +1,29 @@
+
+$red:                           #FF3F3A;
+$red-dark:                      #FF4242;
+$orange:                        #F89828;
+$yellow:                        #FFCF2D;
+$white:                         #FFFFFF;
+$green:                         #03CEA4;
+$blue:                          #5A87FC;
+
+$red-gradient:                  linear-gradient(55.95deg, $red 0%, #F75E05 100%);
+$grey-gradient:                 linear-gradient(270.01deg, rgba(218, 219, 221, 0) 0%, rgba(218, 219, 221, 0.5) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.5) 87.85%, rgba(218, 219, 221, 0) 100%);
+
+$font-family:                   "Lato", "Helvetica Neue", Arial, sans-serif;
+
+$font-size-xs:                  1.4rem;
+$font-size-sm:                  1.6rem;
+$font-size:                     1.6rem;
+$font-size-lg:                  3.4rem;
+$font-size-xl:                  4.8rem;
+
+$container-padding:             15rem;
+$max-width-container:           123rem;
+
+$container-width:               $max-width-container + calc(2 * $container-padding);
+
+$mobile-sm:                     479.98em;
+$mobile:                        767.98em;
+$tablet:                        991.98em;
+$desktop:                       $container-width;

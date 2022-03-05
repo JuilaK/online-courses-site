@@ -1,0 +1,26 @@
+@import './fonts';
+@import './icons';
+@import './variables';
+@import './mixins';
+@import './reset.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-family;
+    font-weight: 400;
+}
+
+.container {
+    box-sizing: content-box;
+    max-width: $max-width-container;
+    padding: 0 $container-padding;
+}
+
+@import './buttons';
