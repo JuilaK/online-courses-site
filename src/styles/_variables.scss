@@ -3,10 +3,10 @@ $red:                           #FF3F3A;
 $red-dark:                      #FF4242;
 $orange:                        #F89828;
 $yellow:                        #FFCF2D;
-$white:                         #FFFFFF;
 $green:                         #03CEA4;
 $blue:                          #5A87FC;
 
+$white:                         #FFFFFF;
 $gray-100:                      #F9F9F9;
 $gray-200:                      #F4F5F7;
 $gray-300:                      #E5E8ED;
@@ -28,14 +28,16 @@ $font-size:                     1.6rem;
 $font-size-lg:                  3.4rem;
 $font-size-xl:                  4.8rem;
 
-$container-padding:             15rem;
-$max-width-container:           123rem;
+$container-padding:             3rem;
+$max-width-container:           129rem;
 
-$container-width:               $max-width-container + calc(2 * $container-padding);
+$mobile-sm:                     479.98px;
+$mobile:                        767.98px;
+$tablet:                        991.98px;
+$desktop:                       1199.98px;
 
-$mobile-sm:                     479.98em;
-$mobile:                        767.98em;
-$tablet:                        991.98em;
-$desktop:                       $container-width;
+$header-height:                 9.4rem;
+$header-height-tablet:          6.4rem;
+$header-height-mobile:          5.4rem;
 
 $btn-border-radius:             .4rem; 

@@ -1,0 +1,7 @@
+mixin button(btnText="", icon=false, iconPlacement=false)
+    button(type="button")(class!=attributes.class)
+        if (icon && iconPlacement && iconPlacement == 'left')
+            span(class=icon)
+        span.btn-title=btnText
+        if (icon && iconPlacement && iconPlacement == 'right')
+            span(class=icon)

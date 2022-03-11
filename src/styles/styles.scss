@@ -13,10 +13,27 @@ html {
     font-size: 62.5%;
 }
 
-.container {
-    box-sizing: content-box;
-    max-width: $max-width-container;
-    padding: 0 $container-padding;
+body {
+    position: relative;
 }
 
-@import './buttons';
+.container {
+    margin: 0 auto;
+    max-width: $max-width-container;
+    padding: 0 $container-padding;
+
+    @media (max-width: $desktop) {
+        max-width: 1050rem;
+    }
+
+    @media (max-width: $tablet) {
+        max-width: 810rem;
+    }
+
+    @media (max-width: $mobile) {
+        max-width: none;
+        padding: 0 1.6rem;
+    }
+}
+
+@import '../components/main';

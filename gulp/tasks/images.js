@@ -9,6 +9,7 @@ export const images = () => {
             message: "Error: <%= error.message %>"
         })
     ))
+    .pipe(app.plugins.replace(/@img\//g, 'images/'))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.plugins.if(
         app.isBuild,
