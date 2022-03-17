@@ -18,7 +18,7 @@
 
     @media (max-width: $tablet) {
         padding-bottom: 4rem;
-        padding-top: 7.2rem;
+        padding-top: 9.6rem;
         background:                
             bottom left no-repeat url('../images/bg-circles.svg'),
             $light-red-gradient;
@@ -82,7 +82,6 @@
         display: inline-block;
         vertical-align: middle;
         margin-left: 1.6rem;
-        color: $gray-900;
         font-size: 1.4rem;
         font-weight: 700;
         line-height: 1.5;
@@ -112,7 +111,7 @@
         z-index: -1;
         @include absolute($left: calc(100% - 1.8rem), $bottom: 1.8rem);
 
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             content: none;
         }
     }
@@ -172,7 +171,6 @@
 .cta-block__statistic-title {
     display: inline-block;
     vertical-align: middle;
-    color: $gray-900;
 }
 
 .cta-block__statistic-numb { 

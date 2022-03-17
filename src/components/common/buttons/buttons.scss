@@ -2,10 +2,6 @@ $btn-circle-size: 5.2rem;
 $btn-circle-size-mobile: 4rem;
 
 @mixin button-style($color: false, $color-hover: false, $background-color: false, $background-color-hover: false, $background-image: false, $background-image-hover: false, $border-color: false, $border-color-hover: false) {
-	@if $color {
-		color: $color;
-    }
-
 	@if $background-image {
 		background-image: $background-image;
     }
@@ -18,14 +14,16 @@ $btn-circle-size-mobile: 4rem;
 		border-color: $border-color;
     }
 
+    span {
+        @if $color {
+            color: $color;
+        }
+    }
+
 	&:focus,
 	&:hover,
 	&:active,
     &.active {
-		@if $color-hover {
-			color: $color-hover;
-        }
-
 		@if $background-image-hover {
 			background-image: $background-image-hover;
         }
@@ -36,6 +34,12 @@ $btn-circle-size-mobile: 4rem;
 
 		@if $border-color-hover {
 			border-color: $border-color-hover;
+        }
+        
+        span {
+            @if $color-hover {
+                color: $color-hover;
+            }
         }
     }            
 }                
