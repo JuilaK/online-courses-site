@@ -3,22 +3,23 @@ include ../buttons/buttons.pug
 mixin header(activeLinkNumb = false) 
     - var links = ["About us", "Courses", "Events", "Blog", "Contacts"];
 
-    header.header.container
-        .header__wrapper
-            button.header__burger(type="button") 
-                span Открыть меню
-            ul.header__burger-menu 
-                each link, index in links
-                    li
-                        a.header__burger-link(href="#" class={active: index === activeLinkNumb})= link
-
-            a.header__logo(href="/") 
-                img(src="@img/logo.svg", alt="Createx logo")
-            ul.header__menu
-                each link, index in links
-                    li
-                        a.header__menu-link(href="#" class={active: index === activeLinkNumb})= link
-                
-        .header__btns
-            +button('Get consultation').btn-primary.btn-lg
-            +button('Log in / Register', 'icon-profile', 'left').btn-text.btn-lg
+    header.header
+        .container
+            .header__wrapper
+                .header__nav
+                    button.header__burger(type="button") 
+                        span Открыть меню
+                    ul.header__burger-menu 
+                        each link, index in links
+                            li
+                                a.header__burger-link(href="#" class={active: index === activeLinkNumb})= link    
+                    a.header__logo(href="/") 
+                        img(src="@img/logo.svg", alt="Createx logo")
+                    ul.header__menu
+                        each link, index in links
+                            li
+                                a.header__menu-link(href="#" class={active: index === activeLinkNumb})= link        
+                .header__btns
+                    +button('Get consultation').btn-primary.btn-lg
+                    +button('Log in / Register', 'icon-profile', 'left').btn-text.btn-lg
+                    

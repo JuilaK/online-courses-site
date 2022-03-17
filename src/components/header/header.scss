@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    z-index: 1;
 
     @include centerX();
     @include size(100%, $header-height);
@@ -17,6 +17,12 @@
 }
 
 .header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav {
     display: flex;
     align-items: center;
     justify-content: stretch;
@@ -148,7 +154,7 @@
 }
 
 .header__burger-menu {
-    transition: right 1s;
+    transition: right .5s;
     z-index: 1;
     padding: 4.8rem 0 2rem;
     text-align: center;
@@ -170,6 +176,14 @@
     display: flex;
     white-space: nowrap;
 
+    .btn {
+        @media (max-width: $mobile) {
+            height: 3.6rem;
+            padding: 0 2.3rem;
+            font-size: 1.2rem;
+        }        
+    }
+    
     .btn-text {
         margin-left: 3.6rem;
         padding: 0;

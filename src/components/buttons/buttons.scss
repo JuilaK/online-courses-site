@@ -1,3 +1,6 @@
+$btn-circle-size: 5.2rem;
+$btn-circle-size-mobile: 4rem;
+
 @mixin button-style($color: false, $color-hover: false, $background-color: false, $background-color-hover: false, $background-image: false, $background-image-hover: false, $border-color: false, $border-color-hover: false) {
 	@if $color {
 		color: $color;
@@ -37,18 +40,19 @@
     }            
 }                
 
-button {
+.btn {
     display: inline-flex;
     align-items: center;
     position: relative;
     height: 4.4rem;
-    padding: 0 3.2rem;
+    padding: 0 3.1rem;
     border: thin solid transparent;  
     border-radius: $btn-border-radius; 
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: .05rem;
     line-height: normal;
+    text-decoration: none;
     white-space: nowrap;
     transition: color, background-color, border-color .3s;
 
@@ -153,28 +157,73 @@ button {
     )
 }
 
+.btn-play {
+    position: relative;
+    border-radius: 50%;
+    background-color: $red;
+    padding: 0;
+
+    @include size($btn-circle-size);
+
+    @media (max-width: $mobile) {
+        @include size($btn-circle-size-mobile);
+    }
+
+    &:before {
+        content: "";
+        background-color: rgba($color: $red, $alpha: .12);
+        border-radius: 50%;
+        transition: transform .5s;
+
+        @include center();
+        @include size($btn-circle-size);
+
+        @media (max-width: $mobile) {
+            @include size($btn-circle-size-mobile);
+        }
+    }
+
+    &:after {        
+        content: "\e976";
+        padding-left: .4rem;
+        color: $white;
+        font-size: 1.6rem;
+        
+        @extend %ic;
+        @include center();
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        &:before {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+    }
+}
+
 //Button sizes
 
 .btn-lg {
     height: 5.2rem;
-    padding: 0 4rem;
+    padding: 0 3.9rem;
     font-size: 1.6rem;
     
     @media (max-width: $desktop){
         height: 4.4rem;
-        padding: 0 3.2rem;
+        padding: 0 3.1rem;
         font-size: 1.4rem;
     }
 
     @media (max-width: $mobile){
         height: 3.6rem;
-        padding: 0 2.4rem;
+        padding: 0 2.3rem;
         font-size: 1.2rem;
     }
 }
 
 .btn-sm {
     height: 3.6rem;
-    padding: 0 2.4rem;
+    padding: 0 2.3rem;
     font-size: 1.2rem;
 }
