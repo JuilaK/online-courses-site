@@ -26,4 +26,8 @@
     @media (max-width: $mobile) {
         font-size: 1.2rem;
     }
+
+    @media (max-width: $mobile-sm) {
+        margin-bottom: .4rem;
+    }
 }
