@@ -1,8 +1,10 @@
 @import './fonts';
 @import './icons';
 @import './variables';
+@import './extend';
 @import './mixins';
 @import './reset.scss';
+@import '../../node_modules/swiper/swiper.scss';
 
 * {
     box-sizing: border-box;
@@ -53,6 +55,24 @@ h1 {
     @media (max-width: $mobile) {
         font-size: 4rem;
     }
+}
+
+h3 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.3;
+
+    @media (max-width: $tablet) {
+        font-size: 2.8rem;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 2rem;
+    }
+}
+
+p {
+    line-height: 1.6;
 }
 
 @import '../components/main';
