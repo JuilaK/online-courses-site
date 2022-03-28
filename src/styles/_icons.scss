@@ -24,6 +24,7 @@
 	&:before {
 		@extend %ic;
 		display: block;
+		color: $gray-900;
 	}
 }
 

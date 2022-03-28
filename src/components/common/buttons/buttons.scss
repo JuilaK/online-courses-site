@@ -18,10 +18,6 @@ $btn-circle-size-mobile: 4rem;
         @if $color {
             color: $color;
         }
-
-        &:before {
-            color: $gray-900;
-        }
     }
 
 	&:focus,

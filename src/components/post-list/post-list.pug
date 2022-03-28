@@ -1,0 +1,27 @@
+include ../common/buttons/buttons.pug
+
+mixin post-card(postType="", imageUrl="#", category="", date="", duration="", title="", desciption="", url="#")
+    .post-card
+        img.post-card__img(src=imageUrl, alt=title)
+        .post-card__badge
+            div(class=postType == 'Podcast' ? 'icon-mic' : postType == 'Video' ? 'icon-play' : 'icon-file') 
+            .post-card__badge-type= postType 
+        .post-card__meta 
+            .post-card__category= category
+            if date
+                .post-card__date-wrapper
+                    .icon-calendar
+                    .post-card__date= date 
+            if duration        
+                .post-card__duration-wrapper    
+                    .icon-clock
+                    .post-card__duration= duration
+        a.post-card__title(href=url)= title 
+        p.post-card__desciption= desciption
+        +link-button((postType=="Podcast" ? 'Listen' : postType=='Video' ? 'Watch' : 'Read'), url, 'icon-arrow-right', 'right').btn-text           
+               
+
+mixin post-list(posts=[])
+    .post-list(class!=attributes.class) 
+        each post in posts
+            +post-card(post.postType, post.imageUrl, post.category, post.date, post.duration, post.title, post.desciption, post.url)           
