@@ -48,10 +48,7 @@ $course-card-img-margin: 1.4rem;
     display: flex;
     border: thin solid $gray-300;
     border-radius: $border-radius;
-    box-shadow: 0 8rem 8rem -2rem rgba(154, 156, 165, 0.08), 
-                0 3rem 2.4rem -1rem rgba(154, 156, 165, 0.05), 
-                0 1.2rem 1rem -.6rem rgba(154, 156, 165, 0.04), 
-                0 .4rem .4rem -.4rem rgba(30, 33, 44, 0.03); 
+    box-shadow: $gray-shadow; 
 }
 
 .course-card__avatar {

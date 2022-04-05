@@ -1,0 +1,11 @@
+mixin member-card(imgUrl="", name="", position="", facebookUrl="", instagramUrl="", linkedinUrl="")
+    .member-card 
+        .member-card__img 
+            img(src=imgUrl, alt=name)
+            .member-card__social 
+                a.icon-facebook(href=facebookUrl target="_blank")
+                a.icon-instagram(href=instagramUrl target="_blank")
+                a.icon-linkedin(href=linkedinUrl target="_blank") 
+        .member-card__info 
+            .member-card__name= name
+            .member-card__position= position
