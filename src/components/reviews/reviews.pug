@@ -6,8 +6,7 @@ include ../review-card/review-card.pug
 
 section.reviews 
     .container 
-        .reviews__header
-            +block-title("What our students say", "Testimonials")
+        +block-title("What our students say", "Testimonials", "center")
         +swiper(false, true).reviews__slider
             each slide in slides 
                 .swiper-slide 

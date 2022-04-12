@@ -1,0 +1,17 @@
+mixin dropdown(optionsList=[])
+    .dropdown(class!=attributes.class)
+        button.btn.dropdown__toggle(type="button")
+            .dropdown__toggle-wrapper
+                .dropdown__option-title= optionsList[0].title
+                if optionsList[0].count
+                    .dropdown__option-count= optionsList[0].count 
+            .icon-chevron-down
+        ul.dropdown__menu   
+            each option, index in optionsList
+                li
+                    button(type="button" data-tab="#tab_" + index).btn.btn-text.dropdown__option
+                        if option.icon 
+                            span(class=option.icon) 
+                        .dropdown__option-title= option.title
+                        if option.count
+                            .dropdown__option-count= option.count  

@@ -1,0 +1,56 @@
+.tabs__nav {
+    white-space: nowrap;
+
+    @media (max-width: $desktop) {
+        display: none;
+    }
+}
+
+.tabs__dropdown {
+    display: none;
+
+    @media (max-width: $desktop) {
+        display: block;
+    }
+}
+
+.tabs__nav-btn {    
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    > * {
+        color: $gray-600;
+        transition: .3s;
+    }
+
+    &:hover {
+        > * {
+            color: $gray-800;
+        }         
+    }
+
+    &.active {
+        border-color: $red;
+
+        > * {
+            color: $red;
+        }    
+    }
+}
+
+.tabs__nav-btn-count {
+    font-size: 1rem;
+    line-height: 1.5;
+
+    @include relative($right: -.4rem, $top: -.4rem);
+}
+
+.tabs__content-item {
+    display: none;
+}
+
+.tabs__content-item.active {
+    display: block;
+}

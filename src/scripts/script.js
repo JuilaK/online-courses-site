@@ -1,6 +1,8 @@
 'use strict';
 import { isWebp } from './checkWebp.js';
+import './dropdown.js';
 import './swiper.js';
+import './tabs.js';
 import 'svgxuse/svgxuse.js';
 
 isWebp();

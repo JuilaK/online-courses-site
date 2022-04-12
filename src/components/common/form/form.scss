@@ -6,6 +6,11 @@ input {
     font-size: 1.4rem;
     line-height: 1.5;
 
+    @media (max-width: $mobile) {
+        height: 3.6rem;
+        font-size: 1.2rem;
+    }
+
     &::placeholder {
         color: $gray-600;
         
@@ -18,6 +23,23 @@ input {
                     0 1.2rem 1rem -.6rem rgba(255, 63, 58, 0.04), 
                     0 .4rem .4rem -.4rem rgba(30, 33, 44, 0.03);
     }
+}
+
+.input__container {
+    position: relative;
+
+    .btn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        font-size: 1.4rem;
+
+        @include absolute($top: 0, $right: 0);
+    }
+}
+
+.input__with-icon {
+    width: 100%;
+    padding-right: 4.8rem;    
 }
 
 .input-lg {

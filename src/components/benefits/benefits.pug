@@ -2,8 +2,7 @@ include ../common/block-title/block-title.pug
 include ../common/buttons/buttons.pug
 
 section.benefits.container
-    .benefits__header
-        +block-title("That’s how we do it", "Our benefits")
+    +block-title("That’s how we do it", "Our benefits", "center")
     .benefits__tabs.js-tabs
         +link-button('Experienced Tutors', '#tutors', 'icon-star', 'left').btn-text.active
         +link-button('Feedback & Support', '#feedback', 'icon-like', 'left').btn-text

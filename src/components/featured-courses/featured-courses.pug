@@ -5,7 +5,7 @@ include ../course-list/course-list.pug
 section.featured-courses.container
     .featured-courses__header
         +block-title("Featured Courses", "Ready to learn?")
-        +link-button("View all courses").btn-primary-outline.btn-lg
+        +link-button("View all courses", "/all-courses.html").btn-primary-outline.btn-lg
     +course-list('',
                 [
                     { 
